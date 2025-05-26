@@ -1,0 +1,12 @@
+<header class="app-header">
+    <div class="logo">
+      <h1>Tienda Online</h1>
+    </div>
+  
+    <nav class="navbar">
+      <button routerLink="/productos">Productos</button>
+      <button routerLink="/carrito" matBadge="{{products}}">Carrito</button>
+      <button routerLink="/clientes/vip">Clientes VIP</button>
+      <button (click)="logOut()">LogOut</button>
+    </nav>
+  </header>

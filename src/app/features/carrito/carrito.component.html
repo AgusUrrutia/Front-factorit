@@ -1,0 +1,44 @@
+<div class="cart-container">
+  @if (!haveCart) {
+    <div class="empty-cart">
+      <h2>No tienes un carrito activo</h2>
+      <p>Por favor crea uno para comenzar a comprar.</p>
+      <button class="btn-create" (click)="crearCarrito()">Crear Carrito</button>
+    </div>
+  } @else if (carrito.products.length === 0) {
+    <div class="empty-cart">
+      <h2>Carrito vacío</h2>
+      <p>No hay productos en el carrito.</p>
+    </div>
+  } @else {
+    <div class="cart-details">
+      <h2>Carrito ID: {{ carrito._id }}</h2>
+      <p><strong>Tipo:</strong> {{ carrito.cartType }}</p>
+
+      <div class="products-list">
+        <h3>Productos</h3>
+        <ul>
+          @for (product of carrito.products; track product._id) {
+            <li class="product-item">
+              <span class="product-name">{{ product.name }}</span>
+              <span class="product-price">$ {{ product.price }}</span>
+              <span class="product-quantity">x {{ product.quantity }}</span>
+              <div class="product-actions">
+                <button class="btn btn-sm btn-increase" (click)="agregarProducto(product._id)">+</button>
+                <button class="btn btn-sm btn-decrease" (click)="eliminarProducto(product._id)">−</button>
+              </div>
+            </li>
+          }
+        </ul>
+      </div>
+
+      <div class="summary">
+        <h4>Resumen</h4>
+        <p>Subtotal: $<span>{{ carrito.subtotal }}</span></p>
+        <p>Descuentos: −$<span>{{ carrito.totalDiscount }}</span></p>
+        <p><strong>Total: ${{ carrito.totalPrice }}</strong></p>
+        <button class="btn-checkout" (click)="finalizarCompra()">Finalizar Compra</button>
+      </div>
+    </div>
+  }
+</div>

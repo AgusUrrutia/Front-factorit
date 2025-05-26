@@ -1,0 +1,38 @@
+.app-header {
+    background-color: #0d6efd;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo h1 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  .navbar {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .navbar button {
+    color: white;
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  }
+  
+  .navbar button:hover {
+    text-decoration: underline;
+    // color: #0d6efd;
+  }
+  
+  .app-content {
+    padding: 2rem;
+  }

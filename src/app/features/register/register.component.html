@@ -1,0 +1,39 @@
+<div class="login-container">
+    <mat-card class="login-card">
+      <mat-card-header>
+        <mat-card-title>Registrarse</mat-card-title>
+      </mat-card-header>
+  
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="fill">
+          <mat-label>Correo Electrónico</mat-label>
+          <input matInput type="email" formControlName="email" required />
+          <mat-error *ngIf="loginForm.get('email')?.hasError('required')">
+            El correo es requerido
+          </mat-error>
+          <mat-error *ngIf="loginForm.get('email')?.hasError('email')">
+            Correo inválido
+          </mat-error>
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill">
+          <mat-label>Contraseña</mat-label>
+          <input matInput type="password" formControlName="password" required />
+          <mat-error *ngIf="loginForm.get('password')?.hasError('required')">
+            La contraseña es requerida
+          </mat-error>
+          <mat-error *ngIf="loginForm.get('password')?.hasError('minlength')">
+            La contraseña debe tener al menos 6 caracteres
+          </mat-error>
+        </mat-form-field>
+  
+        <button mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid">
+          Registrarse
+        </button>
+        <div class="register-link">
+          <span>¿Ya tienes una cuenta? </span>
+          <a routerLink="/login">Inicia sesión aquí</a>
+        </div>
+      </form>
+    </mat-card>
+  </div>
