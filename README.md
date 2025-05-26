@@ -1,29 +1,31 @@
 # ECommerce
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.11.
+Este proyecto fue generado con Angular CLI versión 17.3.11.
 
-## Development server
+## 🛠️ Requisitos previos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+# Antes de comenzar, asegúrate de tener instalado lo siguiente en tu máquina:
 
-## Code scaffolding
+* Node.js (recomendado la última versión estable, incluye npm)
+* Angular CLI (instálalo globalmente con: npm install -g @angular/cli)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## ▶️ Cómo levantar el proyecto
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Clona el repositorio `git clone https://github.com/tu-usuario/e-commerce.git`
 
-## Running unit tests
+2. Ingresa al directorio del proyecto `cd e-commerce`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+3. Instala las dependencias `npm install`
 
-## Running end-to-end tests
+4. Ejecuta la aplicación en modo desarrollo `ng serve`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+5. Accede a la aplicación desde tu navegador `http://localhost:4200/`
 
-## Further help
+## Server de Desarrollo
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+En la terminal, corre el siguiente comando `ng serve` para abrir un server de desarrollo. Navega en tu buscador el siguiente link `http://localhost:4200/`. La aplicacion automaticamente se abrira.
+
+
 # Front-factorit
 En este repositorio se entregará la aplicación de front-end.
